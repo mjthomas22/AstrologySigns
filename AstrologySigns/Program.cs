@@ -12,7 +12,7 @@ namespace AstrologySigns
         {
             //variables
             string name;
-            int month;
+            string month;
             int day;
             int year;
 
@@ -27,8 +27,22 @@ namespace AstrologySigns
             Console.WriteLine("Now to Find out a little bit about you.");
             Console.WriteLine("Please type in your name.");
             name = Console.ReadLine();
-            Console.WriteLine("Birthday");
-            month = Console.Read(); Console.Write("/"); day = Console.Read(); Console.Write("/"); year = Console.Read();
+
+            Console.Clear();
+            Console.WriteLine("Nice to meet you {0}.",name);
+            Console.WriteLine("What month were you born ?");
+            month = Console.ReadLine();
+
+            Console.WriteLine("Awesome, and what day in {0} were you born ?", month);
+            day = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Finally, in what year were you born ?");
+            year = Convert.ToInt32(Console.ReadLine());
+
+            //caculate their sign
+
+
+
 
         }
     }
