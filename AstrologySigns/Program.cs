@@ -31,6 +31,8 @@ namespace AstrologySigns
             Console.Clear();
             Console.WriteLine("Nice to meet you {0}.",name);
             Console.WriteLine("What month were you born ?");
+
+            Console.WriteLine("1. January \n2. February \n3. March \n4. April \n5. May \n6. June \n7. July \n8. August \n9. September \n10. October \n11. November \n12. December");
             month = Console.ReadLine();
 
             Console.WriteLine("Awesome, and what day in {0} were you born ?", month);
