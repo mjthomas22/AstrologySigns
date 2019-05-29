@@ -41,6 +41,10 @@ namespace AstrologySigns
 
             //caculate their sign
 
+            //check code
+            Console.Clear();
+            Console.WriteLine("Name:{0} \n Month:{1} \n Day:{2} \n Year:{3}", name, month, day, year);
+
 
 
 
