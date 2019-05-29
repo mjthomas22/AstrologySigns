@@ -16,11 +16,13 @@ namespace AstrologySigns
             int day;
             int year;
 
+
             //greeting screen
             Console.WriteLine("\t \t Welcome To Sign Finder 3000!");
             Console.WriteLine("\t We will ask you a couple of questions to determine \n \t what your astrology sign is and what that means for you!");
             Console.WriteLine("\n\n\n \t Press any when ready!");
             Console.ReadLine();
+
 
             //gathering information
             Console.Clear();
@@ -29,11 +31,25 @@ namespace AstrologySigns
             name = Console.ReadLine();
 
             Console.Clear();
-            Console.WriteLine("Nice to meet you {0}.",name);
-            Console.WriteLine("What month were you born ?");
+            Console.WriteLine("Nice to meet you {0}.", name);
+            Console.WriteLine("What month were you born ? \n");
+ 
+            // added while loop to ensure proper input
+            
+                Console.WriteLine("1. January \n2. February \n3. March \n4. April \n5. May \n6. June \n7. July \n8. August \n9. September \n10. October \n11. November \n12. December");
+                month = Console.ReadLine();
 
-            Console.WriteLine("1. January \n2. February \n3. March \n4. April \n5. May \n6. June \n7. July \n8. August \n9. September \n10. October \n11. November \n12. December");
-            month = Console.ReadLine();
+             while (month != "1" || month != "2" || month != "3" || month != "4" || month != "5" || month != "6" || month != "7" || month != "8" || month != "9" || month != "10" || month != "11" || month != "12")
+            {
+                Console.Clear();
+                Console.WriteLine("Please enter the number corresponding with the month");
+                Console.WriteLine("1. January \n2. February \n3. March \n4. April \n5. May \n6. June \n7. July \n8. August \n9. September \n10. October \n11. November \n12. December");
+                month = Console.ReadLine();
+
+                if (month == "1" || month == "2" || month == "3" || month == "4" || month == "5" || month == "6" || month == "7" || month == "8" || month == "9" || month == "10" || month == "11" || month == "12")
+                    break;
+
+            }
 
             Console.WriteLine("Awesome, and what day in {0} were you born ?", month);
             day = Convert.ToInt32(Console.ReadLine());
@@ -46,6 +62,7 @@ namespace AstrologySigns
             //check code
             Console.Clear();
             Console.WriteLine("Name:{0} \n Month:{1} \n Day:{2} \n Year:{3}", name, month, day, year);
+
 
 
 
